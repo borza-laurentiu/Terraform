@@ -86,7 +86,7 @@ resource "aws_instance" "TestMachine" {
   key_name                    = var.ssh_key
   subnet_id                   = aws_subnet.DemoPublicSubnet.id
   vpc_security_group_ids       = [aws_security_group.sgPublic.id]
-  associate_public_ip_address = true //to be able to access our instance via SSH
+  associate_public_ip_address = true       //to be able to access our instance via SSH
 
   tags = {
     Name = "${var.name}.tf.TestMachine"
